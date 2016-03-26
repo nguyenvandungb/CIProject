@@ -1,0 +1,27 @@
+PODS:
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - MBProgressHUD (0.9.2)
+  - PasscodeLock (1.0.2)
+  - PureLayout (3.0.1)
+  - Reachability (3.2)
+  - SVPullToRefresh (0.4.1)
+
+DEPENDENCIES:
+  - MagicalRecord
+  - MBProgressHUD
+  - PasscodeLock
+  - PureLayout
+  - Reachability
+  - SVPullToRefresh
+
+SPEC CHECKSUMS:
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  PasscodeLock: 4ae42c094224a01de3773fcd69ae33886394d959
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+
+COCOAPODS: 0.39.0
