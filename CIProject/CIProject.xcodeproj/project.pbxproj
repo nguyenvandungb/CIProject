@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58AB03BD54624D44FA7D4332 /* Pods_CIProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AF326985366FF766ED5824 /* Pods_CIProject.framework */; };
 		5D233AFD1CA701C5000E7579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D233AFC1CA701C5000E7579 /* AppDelegate.swift */; };
 		5D233B001CA701C5000E7579 /* CIProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D233AFE1CA701C5000E7579 /* CIProject.xcdatamodeld */; };
 		5D233B021CA701C5000E7579 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D233B011CA701C5000E7579 /* MasterViewController.swift */; };
@@ -51,6 +52,9 @@
 		5D233B1D1CA701C5000E7579 /* CIProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CIProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D233B211CA701C5000E7579 /* CIProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIProjectUITests.swift; sourceTree = "<group>"; };
 		5D233B231CA701C5000E7579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		605CBF05CD1C9673842B6683 /* Pods-CIProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CIProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CIProject/Pods-CIProject.debug.xcconfig"; sourceTree = "<group>"; };
+		7812EB68C06DE52A2BC424EC /* Pods-CIProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CIProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CIProject/Pods-CIProject.release.xcconfig"; sourceTree = "<group>"; };
+		E6AF326985366FF766ED5824 /* Pods_CIProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CIProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58AB03BD54624D44FA7D4332 /* Pods_CIProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				5D233B151CA701C5000E7579 /* CIProjectTests */,
 				5D233B201CA701C5000E7579 /* CIProjectUITests */,
 				5D233AFA1CA701C5000E7579 /* Products */,
+				80DE906D597C6A265C7258F8 /* Pods */,
+				DEF6FEB0FA70D9A08947179F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +138,23 @@
 			path = CIProjectUITests;
 			sourceTree = "<group>";
 		};
+		80DE906D597C6A265C7258F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				605CBF05CD1C9673842B6683 /* Pods-CIProject.debug.xcconfig */,
+				7812EB68C06DE52A2BC424EC /* Pods-CIProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DEF6FEB0FA70D9A08947179F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6AF326985366FF766ED5824 /* Pods_CIProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D233B261CA701C5000E7579 /* Build configuration list for PBXNativeTarget "CIProject" */;
 			buildPhases = (
+				7DEDDD6FE6BE0DEDD87E45F6 /* Check Pods Manifest.lock */,
 				5D233AF51CA701C5000E7579 /* Sources */,
 				5D233AF61CA701C5000E7579 /* Frameworks */,
 				5D233AF71CA701C5000E7579 /* Resources */,
+				A31085DD2D52894525073B9A /* Embed Pods Frameworks */,
+				D4312B328B4F95CCB8B3F4EB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DEDDD6FE6BE0DEDD87E45F6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A31085DD2D52894525073B9A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CIProject/Pods-CIProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4312B328B4F95CCB8B3F4EB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CIProject/Pods-CIProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D233AF51CA701C5000E7579 /* Sources */ = {
@@ -403,6 +478,7 @@
 		};
 		5D233B271CA701C5000E7579 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 605CBF05CD1C9673842B6683 /* Pods-CIProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CIProject/Info.plist;
@@ -414,6 +490,7 @@
 		};
 		5D233B281CA701C5000E7579 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7812EB68C06DE52A2BC424EC /* Pods-CIProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CIProject/Info.plist;
@@ -490,6 +567,7 @@
 				5D233B281CA701C5000E7579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D233B291CA701C5000E7579 /* Build configuration list for PBXNativeTarget "CIProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +576,7 @@
 				5D233B2B1CA701C5000E7579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D233B2C1CA701C5000E7579 /* Build configuration list for PBXNativeTarget "CIProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +585,7 @@
 				5D233B2E1CA701C5000E7579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
