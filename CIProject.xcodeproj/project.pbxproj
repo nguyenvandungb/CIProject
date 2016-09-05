@@ -153,6 +153,7 @@
 				5D01AD401D4722DA00ABBC26 /* Sources */,
 				5D01AD411D4722DA00ABBC26 /* Frameworks */,
 				5D01AD421D4722DA00ABBC26 /* Resources */,
+				5D4032A31D7D206800B2A7F5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -267,6 +268,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D4032A31D7D206800B2A7F5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# Generate PMD reporter\n# Step 1: Create xcodebuild.log\nxcodebuild clean -project CIProject.xcodeproj/ -scheme 'CIProject' -configuration Debug\nxcodebuild build -target CIProject -configuration Debug -scheme CIProject CLANG_ENABLE_MODULE_DEBUGGING=NO CODE_SIGN_IDENTITY=\"\" CODE_SIGNING_REQUIRED=NO | tee xcodebuild.log\n# Step 2: Create compile_commands.json\noclint-xcodebuild\n# Step 3: Create pmd_oclint.xml\noclint-json-compilation-database -- -report-type pmd -o pmd_oclint.xml";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D01AD401D4722DA00ABBC26 /* Sources */ = {
