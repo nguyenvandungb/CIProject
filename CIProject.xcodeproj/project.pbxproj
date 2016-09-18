@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28E9886CA4C67DE76DD14F94 /* Pods_CIProject_CIProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CIProject_CIProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D01AD441D4722DA00ABBC26 /* CIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D01AD481D4722DA00ABBC26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D01AD4A1D4722DA00ABBC26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +54,8 @@
 		5D01AD6B1D4722DA00ABBC26 /* CIProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CIProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D01AD6F1D4722DA00ABBC26 /* CIProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIProjectUITests.m; sourceTree = "<group>"; };
 		5D01AD711D4722DA00ABBC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		818943E1243DD884CC8E2331 /* Pods_CIProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CIProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DDE4595900760D0ECE96AC4 /* Pods_CIProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CIProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 				5D01AD631D4722DA00ABBC26 /* CIProjectTests */,
 				5D01AD6E1D4722DA00ABBC26 /* CIProjectUITests */,
 				5D01AD451D4722DA00ABBC26 /* Products */,
+				D7105DBBD5111F67D9D0D72F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +145,16 @@
 				5D01AD711D4722DA00ABBC26 /* Info.plist */,
 			);
 			path = CIProjectUITests;
+			sourceTree = "<group>";
+		};
+		D7105DBBD5111F67D9D0D72F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DDE4595900760D0ECE96AC4 /* Pods_CIProject.framework */,
+				28E9886CA4C67DE76DD14F94 /* Pods_CIProject_CIProjectUITests.framework */,
+				818943E1243DD884CC8E2331 /* Pods_CIProjectTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +224,7 @@
 				TargetAttributes = {
 					5D01AD431D4722DA00ABBC26 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = HZ65PG3W65;
+						DevelopmentTeam = Z7YWS97UKQ;
 						ProvisioningStyle = Automatic;
 					};
 					5D01AD5F1D4722DA00ABBC26 = {
@@ -228,6 +242,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -419,14 +434,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
-				DEVELOPMENT_TEAM = HZ65PG3W65;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = CIProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dht.CIProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tspace.testci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -435,13 +453,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
-				DEVELOPMENT_TEAM = HZ65PG3W65;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Z7YWS97UKQ;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = CIProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dht.CIProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tspace.testci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TSALL;
 			};
 			name = Release;
 		};

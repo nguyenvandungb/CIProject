@@ -24,4 +24,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)aaa:(NSUserActivity *)activity {
+  
+}
 @end
