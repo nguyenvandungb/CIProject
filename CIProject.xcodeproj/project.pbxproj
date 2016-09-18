@@ -153,7 +153,6 @@
 				5D01AD401D4722DA00ABBC26 /* Sources */,
 				5D01AD411D4722DA00ABBC26 /* Frameworks */,
 				5D01AD421D4722DA00ABBC26 /* Resources */,
-				5D4032A31D7D206800B2A7F5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -270,22 +269,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5D4032A31D7D206800B2A7F5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D01AD401D4722DA00ABBC26 /* Sources */ = {
